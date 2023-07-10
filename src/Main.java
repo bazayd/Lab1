@@ -25,6 +25,6 @@ public class Main {
 
         System.out.println(helper.isArrayPrimeIter(temp, size));
 
-
+        System.out.println(helper.IsArrayPrimeRecur(temp, size));
     }
 }

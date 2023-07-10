@@ -10,30 +10,41 @@ public class HelperM {
                 arrayPrime = false;
             }
             // Second loop that will check for prime numbers
-            for (int j = 2; j < primeArr[i] / 2; j++) {
+            for (int j = 2; j < primeArr[i]; j++) {
                 if (primeArr[i] % j == 0) {
                     arrayPrime = false;
-                    break;
                 }
             }
         }
-        System.out.println("Exiting isArrayPrimeiter");
+        System.out.println("Exiting isArrayPrimeIter");
         return arrayPrime;
     }
 
     public boolean IsArrayPrimeRecur(int[] primeArr, int size) {
         int i = 0;
-        return IsPrimeRecur(primeArr[i], primeArr[i]);
+        boolean isPrime = true;
+        if (i < size) {
+            int divisor = 2;
+            isPrime = IsPrimeRecur(primeArr[i], divisor);
+        }
+        System.out.println("Exiting IsArrayPrimeRecur");
+        return isPrime;
     }
 
     private boolean IsPrimeRecur(int numberCheck, int divisor) {
         System.out.println("Enter IsArrayPrimeRecur");
+        boolean isPrime = true;
 
-        if (numberCheck / divisor == 1) {
-            return true;
-        }else {
-            return false;
+        if (numberCheck <= 1) {
+            isPrime = false;
         }
 
+        if (divisor < numberCheck) {
+            if (numberCheck % divisor == 0) {
+                isPrime = false;
+            }
+        }
+
+        return isPrime;
     }
 }
