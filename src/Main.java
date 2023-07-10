@@ -19,10 +19,10 @@ public class Main {
             temp[i] = scanner.nextInt();
         }
 
-        System.out.println(Arrays.toString(temp));
-
 
         HelperM helper = new HelperM();
+
+        System.out.println(helper.isArrayPrimeIter(temp, size));
 
 
     }
