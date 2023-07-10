@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
-
+    // Default Array size
     public static int SORT_MAX_SIZE = 16;
 
     public static void main(String[] args) {
@@ -20,10 +20,10 @@ public class Main {
             temp[i] = scanner.nextInt();
         }
 
-        System.out.println(Arrays.toString(temp));
-
 
         HelperM helper = new HelperM();
+
+        System.out.println(helper.isArrayPrimeIter(temp, size));
 
 
     }
