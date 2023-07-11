@@ -5,6 +5,15 @@ public class PrimeFinder {
     public boolean isArrayPrimeIter(int[] primeArr, int size) {
         System.out.println("Entering isArrayPrimeIter");
 
+          /*
+        This method iterates over an array of integers to check for prime numbers
+        Pre: primeArr - a non-empty array of integer numbers
+             size - the size of the array
+             Entering isArrayPrimeIter
+         Post:
+            Return: true or false
+            Print:  Exiting IsArrayPrimeIter
+         */
         /*
             loop (i = 0 and i less than array's size)
                 if (array index is equal to 1)
@@ -38,8 +47,19 @@ public class PrimeFinder {
     public boolean IsArrayPrimeRecur(int[] primeArr, int size) {
 
         /*
+        This helper method uses recursion with helper method IsPrimeRecur to check array's elements for prime numbers
+        Pre: primeArr - A non-empty array of integer numbers
+             size - The size of the array
+             Entering IsArrayPrimeRecur
+         Post:
+           Return: true or false
+           Exiting IsArrayPrimeRecur
+         */
+
+        /*
            Prints enter IsArrayPrimeRecur
            if (primeArr index equals to array size)
+               All elements verified
                Prints exit IsArrayPrimRecur
                returns true
            if (IsPrimeRecur method returns false)
@@ -66,6 +86,14 @@ public class PrimeFinder {
     }
 
     private boolean IsPrimeRecur(int numberCheck, int divisor) {
+        /*
+        This method does the checking for prime numbers of IsArrayPrimeRecur's array through recursion
+        Pre: numberCheck - the number/element from primeArr to check
+             divisor - the number to divide numberCheck by
+         Post:
+             Return: true or false
+             rerun IsPrimeRecur within IsPrimeRecur until conditions are met in IsArrayPrimeRecur
+         */
 
         /*
           if (number to check is less than or equal to 1)

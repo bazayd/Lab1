@@ -21,9 +21,6 @@ public class Main {
         System.out.println("Enter array size: ");
         int size = scanner.nextInt();
 
-       // int[] temp = Arrays.copyOf(array, size);
-
-
         System.out.println("Enter element (From 1 to 9999): ");
         for (int i = 0; i < size; i++) {
             array[i] = scanner.nextInt();
