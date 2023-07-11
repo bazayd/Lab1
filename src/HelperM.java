@@ -21,30 +21,31 @@ public class HelperM {
     }
 
     public boolean IsArrayPrimeRecur(int[] primeArr, int size) {
-        int i = 0;
-        boolean isPrime = true;
-        if (i < size) {
-            int divisor = 2;
-            isPrime = IsPrimeRecur(primeArr[i], divisor);
+        System.out.println("Enter IsArrayPrimeRecur");
+        int index = 0;
+        if (index == size) {
+            return true;
         }
-        System.out.println("Exiting IsArrayPrimeRecur");
-        return isPrime;
+        if (!IsPrimeRecur(primeArr[index],2)) {
+            return false;
+        }
+        ++index;
+        return isArrayPrimeIter(primeArr, size);
     }
 
     private boolean IsPrimeRecur(int numberCheck, int divisor) {
-        System.out.println("Enter IsArrayPrimeRecur");
-        boolean isPrime = true;
-
         if (numberCheck <= 1) {
-            isPrime = false;
+            return false;
         }
 
-        if (divisor < numberCheck) {
-            if (numberCheck % divisor == 0) {
-                isPrime = false;
-            }
+        if (divisor * divisor > numberCheck) {
+            return true;
         }
 
-        return isPrime;
+        if (numberCheck % divisor == 0) {
+            return false;
+        }
+
+        return IsPrimeRecur(numberCheck, divisor+1);
     }
 }
