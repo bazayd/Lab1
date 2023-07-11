@@ -1,5 +1,14 @@
 import java.util.Arrays;
 import java.util.Scanner;
+
+/*
+* Lab 1
+* Brandon Arriaga
+*
+* This program checks an array through the use of iteration & recursion to check if all numbers are prime or not.
+*
+* */
+
 public class Main {
     // Default Array size
     private static final int SORT_MAX_SIZE = 16;
