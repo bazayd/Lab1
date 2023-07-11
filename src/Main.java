@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     // Default Array size
-    public static int SORT_MAX_SIZE = 16;
+    private static final int SORT_MAX_SIZE = 16;
 
     public static void main(String[] args) {
 
@@ -12,19 +12,30 @@ public class Main {
         System.out.println("Enter array size: ");
         int size = scanner.nextInt();
 
-        int[] temp = Arrays.copyOf(array, size);
+       // int[] temp = Arrays.copyOf(array, size);
 
 
         System.out.println("Enter element (From 1 to 9999): ");
-        for (int i = 0; i < temp.length; i++) {
-            temp[i] = scanner.nextInt();
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
         }
 
+        PrimeFinder primeFinder = new PrimeFinder();
 
-        HelperM helper = new HelperM();
+        boolean iterPrime = primeFinder.isArrayPrimeIter(array, size);
 
-        System.out.println(helper.isArrayPrimeIter(temp, size));
+        if (iterPrime) {
+            System.out.println("Prime Array using iteration");
+        } else {
+            System.out.println("Not a Prime Array using iteration");
+        }
 
-        System.out.println(helper.IsArrayPrimeRecur(temp, size));
+        boolean recurPrime = primeFinder.IsArrayPrimeRecur(array, size);
+
+        if (recurPrime) {
+            System.out.println("Prime Array using recursion");
+        } else {
+            System.out.println("Not a Prime Array using recursion");
+        }
     }
 }
