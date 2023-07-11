@@ -1,12 +1,14 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 /*
 * Lab 1
-* Brandon Arriaga
+* Authors: Brandon Arriaga, Nicholas Kang
 *
 *
-* This program checks an array through the use of iteration & recursion to check if all numbers are prime or not.
+*  Find out if an array are all prime numbers through using iteration and recursion
 *
 * */
 
@@ -83,6 +85,7 @@ public class Main {
            return IsArrayPrimeRecur until conditions meet
 
          */
+        System.out.println("Entering IsArrayPrimeRecur");
         if (index == size) {
             System.out.println("Exiting IsArrayPrimeRecur");
 
@@ -94,7 +97,6 @@ public class Main {
             return false;
         }
         ++index;
-        System.out.println("Entering IsArrayPrimeRecur");
 
         return IsArrayPrimeRecur(primeArr, size);
     }
@@ -119,19 +121,22 @@ public class Main {
           rerun IsPrimeRecur with the number to check from the array given and incrementing divisor
 
          */
+        System.out.println("Entering IsPrimeRecur");
         if (numberCheck <= 1) {
+            System.out.println("Exiting IsPrimeRecur");
             return false;
         }
 
         if (divisor * divisor > numberCheck) {
+            System.out.println("Exiting IsPrimeRecur");
             return true;
         }
 
         if (numberCheck % divisor == 0) {
+            System.out.println("Exiting IsPrimeRecur");
             return false;
         }
-
-        return IsPrimeRecur(numberCheck, divisor+1);
+        return IsPrimeRecur(numberCheck, divisor / 2);
     }
 
     // Main
