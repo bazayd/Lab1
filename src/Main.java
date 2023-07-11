@@ -96,8 +96,8 @@ public class Main {
 
             return false;
         }
+        System.out.println("Exiting IsArrayPrimeRecur");
         ++index;
-
         return IsArrayPrimeRecur(primeArr, size);
     }
 
@@ -132,11 +132,11 @@ public class Main {
             return true;
         }
 
-        if (numberCheck % divisor == 0) {
+        if (numberCheck % sqrt(divisor) == 0) {
             System.out.println("Exiting IsPrimeRecur");
             return false;
         }
-        return IsPrimeRecur(numberCheck, divisor / 2);
+        return IsPrimeRecur(numberCheck, divisor + 1);
     }
 
     // Main
