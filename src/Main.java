@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Math.sqrt;
@@ -29,6 +28,7 @@ public class Main {
             Return: true or false
             Print:  Exiting IsArrayPrimeIter
          */
+
         /*
             loop (i = 0 and i less than array's size)
                 if (array index is equal to 1)
@@ -169,5 +169,9 @@ public class Main {
         } else {
             System.out.println("Not a Prime Array using recursion");
         }
+
+        // Pause at the end of the console window, press any key and enter to end program.
+        System.out.println(" ");
+        String pause = scanner.next();
     }
 }
