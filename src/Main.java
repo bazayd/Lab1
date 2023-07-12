@@ -5,6 +5,8 @@ import static java.lang.Math.sqrt;
 /*
 * Lab 1
 * Authors: Brandon Arriaga, Nicholas Kang
+* Group 10 JAVA
+*
 *
 *
 *  Find out if an array are all prime numbers through using iteration and recursion
